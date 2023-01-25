@@ -2,32 +2,24 @@
 #include <stack>
 using namespace std;
 
-/*
-ALGORITHM:
-Push ( onto stack and add ) to the end of expression.
-Scan Q from left to right until the stack is empty and repeat steps:
-    a- If an operand occurs, add it to P.
-    b- If an operator occurs, then:
-        1- Repeatedly pop from stack and add to P each operator(on top of stack)
-           which has same or higher precedence.
-        2- Add operator to stack.
-    c- If ( occurs, push it to stack.
-    d- If ) occurs then:
-        1- Repeatedly pop from stack and add to P each operator(on top of stack)
-           until left parenthesis occurs.
-        2- Remove parenthesis.
-*/
-
-int prec(char c)
+int prec(char opr)
 {
-    if (c == '^')
-        return 3;
-    else if (c == '/' || c == '*')
-        return 2;
-    else if (c == '+' || c == '-')
+    if (opr=='+' || opr=='-')
+    {
         return 1;
+    }
+    else if (opr=='*' || opr=='/')
+    {
+        return 2;
+    }
+    else if (opr=='^')
+    {
+        return 3;
+    }
     else
+    {
         return -1;
+    }
 }
 
 void InfixToPostfix(string exp)
@@ -43,7 +35,7 @@ void InfixToPostfix(string exp)
             result += c;
 
         else if (c == '(')
-            s.push('(');
+            s.push(c);
 
         else if (c == ')')
         {
@@ -58,7 +50,7 @@ void InfixToPostfix(string exp)
         else
         {
             // pop the elements from stack which has same or higher precedence
-            while (!s.empty() && prec(c) <= prec(s.top()))
+            while (!s.empty() && (prec(c) <= prec(s.top())))
             {
                 result += s.top();
                 s.pop();
@@ -76,9 +68,11 @@ void InfixToPostfix(string exp)
     cout << result << endl;
 }
 
+
 int main()
 {
     string exp = "(A+(B*C-(D/E^F)*G)*H)";
     InfixToPostfix(exp);
+    
     return 0;
 }

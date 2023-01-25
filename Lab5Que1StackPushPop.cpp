@@ -51,10 +51,7 @@ class Stack
             return 0;
         }
     }
-
 };
-
-
 
 int main()
 {
@@ -68,6 +65,7 @@ int main()
     s.Push(33); 
     
     cout<<"\nPopped Elements Are:"<<endl; 
+    
     while(!s.IsEmpty())
     {
         cout << s.Pop() << endl;

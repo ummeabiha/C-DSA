@@ -32,9 +32,9 @@ Node* Insert(Node* root, char data)
         root->right = Insert(root->right, data); 
     } 
     return root; 
-
 }
 
+ 
 void Inorder(Node* root)
 {
     if (root==NULL)

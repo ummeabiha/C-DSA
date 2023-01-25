@@ -9,9 +9,9 @@ void Fibonacci(int n)
 
     for(int i=3; i<=n; i++)
     {
-        prevprevNum= prevNum;
-        prevNum= currNum;
-        currNum= prevprevNum+prevNum;
+        prevprevNum= prevNum; //1st iter--> Term1(1), 2nd iter--> Term2(1), 3rd iter--> Term3(2)
+        prevNum= currNum; //1st iter--> Term2(1), 2nd iter--> Term3(2), 3rd iter--> Term4(3)
+        currNum= prevprevNum+prevNum; //1st iter--> 2, //2nd iter--> 3, //3rd iter--> Term2(5)
         cout << "Term " << i << ": " << currNum << endl;
     }
 }

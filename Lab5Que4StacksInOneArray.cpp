@@ -77,15 +77,17 @@ int main()
 {
     pushS1(22, arr); 
     pushS1(44, arr); 
-    pushS1(66, arr); 
-    pushS1(68, arr); 
-    pushS1(65, arr); 
+    // pushS1(66, arr); 
+    // pushS1(68, arr); 
+    // pushS1(65, arr); 
     
     traverse(arr, n); 
     pushS1(64, arr); 
 
     cout<<"\nthe popped element is "<<popS1()<<endl; 
     cout<<"the popped element is "<<popS1()<<endl; 
+    cout<<"the popped element is "<<popS1()<<endl;
+    cout<<"the popped element is "<<popS1()<<endl;  
 
     return 0;
 }
