@@ -54,7 +54,7 @@ Node* Search(Node* root, int item)
     {
         return root;
     }
-    else if (root->data >item)
+    else if (root->data > item)
     {
         return Search(root->left, item);
     }
@@ -86,7 +86,7 @@ Node* Deletion(Node* root, int data)
         cout << "\nNode is deleted from the right." << endl;
     }
 
-    else if (loc->data< root->data)
+    else if (loc->data < root->data)
     {
         Deletion(root->left, data);
     }

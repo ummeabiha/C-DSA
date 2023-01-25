@@ -30,7 +30,6 @@ void BubbleSortRecc(int arr[], int size)
     BubbleSortRecc(arr, size-1);
 }
 
-
 int main()
 {
     int arr[]={4, 7, 8, 10, 2};
@@ -39,3 +38,4 @@ int main()
     traverse(arr,size);
     return 0;
 }
+

@@ -15,7 +15,6 @@ int main()
         cout << Queue.front() << ' ';
         Queue.pop();
     }
-
     return 0;
 }
 

@@ -3,15 +3,13 @@ using namespace std;
 
 void push(int top, int size, int item, int stack[])
 {
-
     if (top >= (size-1))
     {
         cout << "Stack Overflow" << endl;
     }
-
     else
     {
-        top+=1;
+        top++;
         stack[top]=item;
         cout << item << " is pushed into the stack" << endl;
     }
@@ -30,21 +28,6 @@ void search(int top, int stack[])
     }
 }
 
-// void pop()
-// {
-//     if (top == -1)
-//     {
-//         cout << "Stack Underflow" << endl;
-//     }
-
-//     else
-//     {
-//         top-=1;
-//     }
-// }
-
-
-
 int main()
 {
     int stack[3];
@@ -59,8 +42,6 @@ int main()
 
     cout << "Stackkkk " << endl;
     search(top,stack);
-
-
 
     return 0;
 }

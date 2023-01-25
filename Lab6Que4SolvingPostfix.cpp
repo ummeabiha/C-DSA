@@ -3,6 +3,21 @@
 #include <math.h>
 using namespace std;
 
+/*
+ALGORTHM:
+1- Scan P from right to left until index of P = 0.
+2- If an operand is encountered, push it to STACK.
+3- If an operator * is encountered, then:
+    a) Remove the two top elements of STACK, where A is the top element and
+    B is next-to-top element.
+    b) Evaluate A * B.
+    c) Place result of b on STACK.
+[End of If Structure]
+[End of Loop Step 1]
+4 - Return top element on STACK.
+5- EXIT.
+*/
+
 bool IsDigit(char C)
 {
     if (C >= '0' && C <= '9')
@@ -89,3 +104,4 @@ int main()
 
     return 0;
 }
+
